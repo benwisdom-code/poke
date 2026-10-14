@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>poke</title>
+    <meta
+      name="description"
+      content="Refresh for a new creature. Poke it and it giggles."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bagel:wght@400;700&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='42' fill='%23f07167'/%3E%3Ccircle cx='36' cy='42' r='6' fill='%231a2e35'/%3E%3Ccircle cx='64' cy='42' r='6' fill='%231a2e35'/%3E%3Cpath d='M35 62 Q50 74 65 62' stroke='%231a2e35' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+      <div class="grain"></div>
+    </div>
+
+    <main class="stage">
+      <header class="brand-block">
+        <h1 class="brand">poke</h1>
+        <p class="tagline">A tiny creature, grown from chance. Poke it.</p>
+      </header>
+
+      <section class="creature-plane" aria-label="Creature stage">
+        <div id="giggle-cloud" class="giggle-cloud" aria-live="polite"></div>
+        <button
+          id="creature-btn"
+          class="creature-btn"
+          type="button"
+          aria-label="Poke the creature"
+        >
+          <svg
+            id="creature-svg"
+            class="creature-svg"
+            viewBox="0 0 320 320"
+            role="img"
+            aria-labelledby="creature-name"
+          >
+            <title id="creature-name">Creature</title>
+          </svg>
+        </button>
+      </section>
+
+      <p class="hint">
+        <span>tap to poke</span>
+        <span class="dot" aria-hidden="true">·</span>
+        <span>refresh for a new one</span>
+      </p>
+
+      <aside id="genome-panel" class="genome" hidden>
+        <h2 class="genome-title">genome</h2>
+        <dl id="genome-list" class="genome-list"></dl>
+      </aside>
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
